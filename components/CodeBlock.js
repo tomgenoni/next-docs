@@ -1,6 +1,6 @@
 import React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import duotoneLight from 'prism-react-renderer/themes/duotoneLight';
+import github from 'prism-react-renderer/themes/github';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Button from './Button';
 
@@ -9,9 +9,9 @@ const CodeBlock = ({ children, className, live }) => {
   const language = className.replace(/language-/, '');
   if (live) {
     return (
-      <div style={{ border: '1px solid red' }}>
-        <LiveProvider code={children.trim()} scope={scope}>
-          <LivePreview />
+      <div style={{ border: '1px solid #ddd' }}>
+        <LiveProvider code={children.trim()} scope={scope} theme={github}>
+          <LivePreview style={{ padding: 20, borderBottom: '1px solid #ddd' }} />
           <LiveEditor style={{ fontFamily: 'Source Code Pro' }} />
           <LiveError />
         </LiveProvider>
@@ -19,9 +19,9 @@ const CodeBlock = ({ children, className, live }) => {
     );
   }
   return (
-    <Highlight {...defaultProps} code={children.trim()} language={language} theme={duotoneLight}>
+    <Highlight {...defaultProps} code={children.trim()} language={language} theme={github}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={{ ...style, padding: '20px' }}>
+        <pre className={className} style={{ ...style, padding: '12px' }}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (

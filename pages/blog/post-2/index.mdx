@@ -2,22 +2,24 @@ import BlogPost from '../../../components/BlogPost';
 import Button from '../../../components/Button';
 
 export const meta = {
-  title: 'Introduction to Next.js',
-  description: 'Getting started with the Next framework',
+  title: 'Button',
+  description: 'Clickable elements used to perform actions',
 };
 
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 
-# My Headline
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maximus pellentesque dolor non egestas. In sed tristique elit. Cras vehicula, nisl vel ultricies gravida, augue nibh laoreet arcu, et tincidunt augue dui non elit. Vestibulum semper posuere magna, quis molestie mauris faucibus ut.
+This is an example of editing live code using `react-live` within an mdx file. Syntax highlighting provided by `prism-react-renderer`.
 
 ```js live=true
 <Button>hello</Button>
 ```
 
+An example of code in a standard Markdown code block.
+
 ```js
-<div>foo</div>
+var foo = 'bar';
 ```
+
+An example of our React `Button` component.
 
 <Button>hello</Button>

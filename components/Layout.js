@@ -16,6 +16,7 @@ export default function Layout({ children, pageTitle, description }) {
           padding: 0;
           font-family: apple-system, BlinkMacSystemFont, sans-serif;
           font-size: 1rem;
+          line-height: 22px;
         }
         h1,
         h2,
@@ -36,7 +37,8 @@ export default function Layout({ children, pageTitle, description }) {
 
         pre,
         code {
-          font-family: 'Source Code Pro';
+          font-family: 'Source Code Pro' !important;
+          font-size: 15px !important;
         }
       `}</style>
       <main>

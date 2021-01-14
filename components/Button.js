@@ -1,3 +1,16 @@
 export default function Button({ children }) {
-  return <button style={{ padding: 20 }}>{children}</button>;
+  return (
+    <button
+      style={{
+        padding: '8px 16px',
+        background: 'blue',
+        color: 'white',
+        border: 'none',
+        borderRadius: 4,
+        cursor: 'pointer',
+      }}
+    >
+      {children}
+    </button>
+  );
 }

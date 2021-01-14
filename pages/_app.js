@@ -6,7 +6,7 @@ import '../styles/globals.css';
 export default function App({ Component, pageProps }) {
   return (
     <MDXProvider>
-      <Layout pageTitle='Blog' description='My Personal Blog'>
+      <Layout pageTitle='BrandKit' description='UI for stuff'>
         <Component {...pageProps} />
       </Layout>
     </MDXProvider>

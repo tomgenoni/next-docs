@@ -30,11 +30,11 @@ export default function Layout({ children, pageTitle, description }) {
           color: blue;
         }
         .content {
-          max-width: 600px;
+          max-width: 800px;
           margin: 2rem auto;
           padding: 0 1rem;
         }
-
+        textarea,
         pre,
         code {
           font-family: 'Source Code Pro' !important;

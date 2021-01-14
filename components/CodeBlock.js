@@ -3,9 +3,10 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import github from 'prism-react-renderer/themes/github';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Button from './Button';
+import Tag from './Tag';
 
 const CodeBlock = ({ children, className, live }) => {
-  const scope = { Button };
+  const scope = { Tag, Button };
   const language = className.replace(/language-/, '');
   if (live) {
     return (

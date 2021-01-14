@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Header from './Header';
 
 export default function Layout({ children, pageTitle, description }) {
   return (
@@ -11,15 +10,11 @@ export default function Layout({ children, pageTitle, description }) {
         <title>{pageTitle}</title>
       </Head>
       <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap|Roboto:wght@400;700&display=swap');
         html,
         body {
           margin: 0;
           padding: 0;
-          font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-            Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-          background: #333;
-          color: #fff;
+          font-family: apple-system, BlinkMacSystemFont, sans-serif;
           font-size: 1rem;
         }
         h1,
@@ -29,8 +24,6 @@ export default function Layout({ children, pageTitle, description }) {
         h5,
         h6 {
           font-weight: 700;
-          font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-            Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         a {
           color: #fff;
@@ -40,9 +33,13 @@ export default function Layout({ children, pageTitle, description }) {
           margin: 2rem auto;
           padding: 0 1rem;
         }
+
+        pre,
+        code {
+          font-family: 'Source Code Pro';
+        }
       `}</style>
       <main>
-        <Header />
         <div className='content'>{children}</div>
       </main>
     </>

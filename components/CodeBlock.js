@@ -9,7 +9,7 @@ const CodeBlock = ({ children, className, live }) => {
   const language = className.replace(/language-/, '');
   if (live) {
     return (
-      <div style={{ border: '1px solid #ddd' }}>
+      <div style={{ border: '1px solid #ddd', marginBottom: 32 }}>
         <LiveProvider code={children.trim()} scope={scope} theme={github}>
           <LivePreview style={{ padding: 20, borderBottom: '1px solid #ddd' }} />
           <LiveEditor style={{ fontFamily: 'Source Code Pro' }} />
@@ -21,7 +21,7 @@ const CodeBlock = ({ children, className, live }) => {
   return (
     <Highlight {...defaultProps} code={children.trim()} language={language} theme={github}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={{ ...style, padding: '12px' }}>
+        <pre className={className} style={{ ...style, padding: '12px', marginBottom: 32 }}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (

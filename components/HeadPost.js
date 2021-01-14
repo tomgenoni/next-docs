@@ -19,7 +19,7 @@ export const HeadPost = ({ meta, isBlogPost }) => (
         }
         .details {
           font-size: 19px;
-          margin-bottom: 1rem;
+          margin-bottom: 32px;
         }
       `}
     </style>

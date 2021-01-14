@@ -27,7 +27,7 @@ export default function Layout({ children, pageTitle, description }) {
           font-weight: 700;
         }
         a {
-          color: #fff;
+          color: blue;
         }
         .content {
           max-width: 600px;

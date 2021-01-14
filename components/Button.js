@@ -8,6 +8,8 @@ export default function Button({ children }) {
         border: 'none',
         borderRadius: 4,
         cursor: 'pointer',
+        fontFamily: 'inherit',
+        fontWeight: 700,
       }}
     >
       {children}

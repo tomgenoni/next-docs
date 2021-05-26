@@ -1,6 +1,18 @@
-export default function Button({ children }) {
+interface PropTypes {
+  /**
+   * Text content to render.
+   */
+  theme: 'foo';
+  /**
+   * Text content to render.
+   */
+  children: string
+}
+
+const Button: React.FC<PropTypes> = ({children, theme}: PropTypes) => {
   return (
     <button
+      className={theme}
       style={{
         padding: '8px 16px',
         background: 'blue',
@@ -16,3 +28,5 @@ export default function Button({ children }) {
     </button>
   );
 }
+
+export default Button;

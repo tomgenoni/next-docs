@@ -1,4 +1,11 @@
-export default function Tag({ children }) {
+interface PropTypes {
+  /**
+   * Text content to render.
+   */
+  children: string
+}
+
+const Tag: React.FC<PropTypes> = ({children}: PropTypes) => {
   return (
     <div
       style={{
@@ -18,3 +25,5 @@ export default function Tag({ children }) {
     </div>
   );
 }
+
+export default Tag;

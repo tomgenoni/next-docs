@@ -1,3 +1,5 @@
+import Props from 'pretty-proptypes';
+
 import BlogPost from '../../../components/BlogPost';
 import Button from '../../../components/Button';
 
@@ -23,3 +25,5 @@ const foo = 'bar';
 An example of our React `Button` component.
 
 <Button>I’m a button</Button>
+
+<Props heading='Props' props={require('!!extract-react-types-loader!../../../components/Button')} />

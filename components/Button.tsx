@@ -1,8 +1,8 @@
 interface PropTypes {
   /**
-   * Text content to render.
+   * Theme of the thing.
    */
-  theme: 'foo';
+  theme?: 'foo';
   /**
    * Text content to render.
    */

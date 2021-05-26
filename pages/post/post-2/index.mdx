@@ -1,3 +1,4 @@
+import Props from 'pretty-proptypes';
 import BlogPost from '../../../components/BlogPost';
 import Tag from '../../../components/Tag';
 
@@ -23,3 +24,5 @@ const foo = 'bar';
 An example of our React `Tag` component.
 
 <Tag>I’m a tag</Tag>
+
+<Props heading='Props' props={require('!!extract-react-types-loader!../../../components/Tag')} />

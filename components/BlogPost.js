@@ -1,8 +1,10 @@
+import Props from 'pretty-proptypes';
 import { HeadPost } from './HeadPost';
 import { Post } from './Post';
 import { posts } from '../getAllPosts';
 
 export default function BlogPost({ children, meta }) {
+  const componentName = meta.title;
   return (
     <>
       <div style={{ display: 'flex' }}>
@@ -14,6 +16,10 @@ export default function BlogPost({ children, meta }) {
         <div>
           <HeadPost meta={meta} isBlogPost />
           <article>{children}</article>
+          <Props
+            heading='Props'
+            props={require(`!!extract-react-types-loader!./${componentName}`)}
+          />
         </div>
       </div>
     </>

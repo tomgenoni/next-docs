@@ -1,3 +1,6 @@
+import Props from 'pretty-proptypes';
+
+import Button from './Button';
 import { HeadPost } from './HeadPost';
 import { Post } from './Post';
 import { posts } from '../getAllPosts';
@@ -14,6 +17,7 @@ export default function BlogPost({ children, meta }) {
         <div>
           <HeadPost meta={meta} isBlogPost />
           <article>{children}</article>
+          <Props heading='Props' props={require('!!extract-react-types-loader!./Button')} />
         </div>
       </div>
     </>

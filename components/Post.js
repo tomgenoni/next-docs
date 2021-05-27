@@ -8,7 +8,7 @@ export const Post = ({ post }) => {
 
   return (
     <div>
-      <Link href={'/post' + link}>
+      <Link href={link}>
         <a>{meta.title}</a>
       </Link>
     </div>
